@@ -1,0 +1,37 @@
+<!-- Build-in Pipe tranform display value within a template-->
+<!-- It takes data as input and transform it to a desired output-->
+
+<!--date build in pipe-->
+<p>medium: {{todate | date:'medium'}}</p>
+<p>short: {{todate | date:'short'}}</p>
+<p>fullDate: {{todate | date:'fullDate'}}</p>
+<p>longDate: {{todate | date:'longDate'}}</p>
+<p>mediumDate: {{todate | date:'mediumDate'}}</p>
+<p>shortDate: {{todate | date:'shortDate'}}</p>
+<p>dd-MM-y: {{todate | date:'dd-MM-y'}}</p>
+<p>dd-MM-yy HH:mm : {{todate | date:'dd-MM-yy HH:mm'}}</p>
+
+<!--string build in pipe-->
+<p>{{name | uppercase}}</p>
+<p>{{name | lowercase}}</p>
+
+<!--Slice pipe-->
+<p>{{msg}}</p>
+<p>{{msg | slice:11:20}}</p>
+<p>{{msg | slice:-9}}</p>
+
+<!-- decimal pipe and number pipe-->
+<p>{{num1}}</p>
+<p>{{num1 | number}}</p>
+<p>{{num1 | number:'3.1-2'}}</p>
+<p>{{num1 | number:'7.1-5'}}</p>
+
+<!--percente pipe-->
+<p>{{per}}</p>
+<p>{{per | percent}}</p>
+<p>{{per | percent:'1.2-2'}}</p>
+
+<!--currency pipe-->
+<p>{{cur}}</p>
+<p>{{cur | currency}}</p>
+<p>{{cur | currency:'INR':true:'4.2-2'}}</p>
