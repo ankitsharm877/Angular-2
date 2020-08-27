@@ -1,0 +1,46 @@
+<!--Directives allow us to transform the DOM while rendering,-->
+<!--it adds dynmaic behavior to HTML and manipulate it.-->
+<!-- There are three kind of directives:-->
+<!--      1.Component Directive-->
+<!--      2.Structural Directive-->
+<!--      3.Attribute Directive-->
+
+<!--Component Directive: using this we can add a component view into current component using selector-->
+<h1>1.Component Directive</h1>
+<app-child></app-child>
+
+<!--Structural Directive: it change the DOM layout by adding and removing -->
+<!--dom element or change the structure of view-->
+<h1>2.Strutural Directive</h1>
+
+<ul *ngFor="let list of appList">
+  <li>{{list.Id}}</li>
+  <li>{{list.Name}}</li>
+</ul>
+
+<input [(ngModel)]='num' type="text" name="num" id="num">
+<div [ngSwitch]='num'>
+    <p *ngSwitchCase="'1'">One</p>
+    <p *ngSwitchCase="'2'">Two</p>
+    <p *ngSwitchCase="'3'">Three</p>
+    <p *ngSwitchCase="'4'">Four</p>
+    <p *ngSwitchDefault>This is default case</p>
+</div>
+
+<div *ngIf="num == 0">
+  <p>ngIf condition</p>
+</div>
+
+<!--Attribute Directive: it change the apperance or behaviour of an element, component or another directive-->
+<!--They are used as attributes of elements example ngStyle and ngClass -->
+<h1>3.Attribute Directive</h1>
+<p [ngClass]="'redClass size20'">This one for attribute directive ngClass</p>
+<p [ngClass]="['redClass', 'size20']">This one for attribute directive ngClass with array</p>
+<p [ngClass]="{'redClass':true, 'size20':true}">This one for attribute directive ngClass with object</p>
+
+
+<p [ngStyle]="{'color': 'purple',
+               'font-size': '20px',
+               'font-weight': 'bold'}">
+     Multiple styles
+</p>
