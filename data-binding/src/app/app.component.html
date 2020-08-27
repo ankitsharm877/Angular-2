@@ -1,0 +1,34 @@
+<!--Data Binding -->
+<!--There Four kinds of data binding in angular-->
+<!--     1.Interpolation-->
+<!--     2.Property Binding-->
+<!--     3.Event Binding-->
+<!--     4.Two-way Binding-->
+
+<!--Interpolation: used to display a component property in the view template with double curly braces syntax-->
+<!--Its one way data binding, from component to view -->
+<p>1.Interpolation</p>
+<h1>{{title}}</h1>
+<h2>{{'Title: ' + title}}</h2>
+<h3>{{2*5+10}}</h3>
+<h4>{{'Title: '+getTitle()}}</h4>
+<h5 title={{title}}>Move the mouse cursor here to see the title</h5>
+
+<!--Property Binding: it allow us to glue component properties to DOM element properties-->
+<!--Its a primary way to bind data in anular. If component property changes that get updated in the DOM-->
+<!--It is also one-way binding, from component to view-->
+<p>2.Property Binding</p>
+<h1 [title]='paragraphTitle'>{{paragraphTitle}}</h1>
+<img [src]='imagepath'/>
+
+<!--Event Binding: it allow us to listen DOM event and call a component method when it is triggered-->
+<!--Its one way data binding, from view to component-->
+<br>
+<p>3.Event Binding</p>
+<button (click)='add()'>Click Me!</button>
+<p>{{'count: '+count}}</p>
+
+<!--Two-way Binding: it combines the property binding and event binding into single -->
+<!-- notation using the ngModel directive-->
+<input [(ngModel)]='name' name="name" id="name">
+<p>{{'Name: '+name}}</p>
