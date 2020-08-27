@@ -1,0 +1,31 @@
+<h1 class="heading"><strong>HTTPClient </strong> Example</h1>
+
+
+<table class='table' border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Experience</th>
+      <th>Domain</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users;">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.experience}}</td>
+      <td>{{user.domain}}</td>
+    </tr>
+  </tbody>
+</table> 
+
+<pre>{{users | json}}</pre>
+
+<div class="form-group">
+  <label for="file">Choose File</label>
+  <input type="file"
+         id="file"
+         (change)="handleFileInput($event.target.files)">
+</div>
+<button (click)="uplaodFile()">Upload</button>
