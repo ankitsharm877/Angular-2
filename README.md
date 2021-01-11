@@ -1,5 +1,5 @@
 # Angular 2 Basic concept Example
-It all ngular 2 basic concept example :
+This project contains all angular 2 basic concept example:
   * modules-and-component
   * data-binding
   * build-in-pipe
